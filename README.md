@@ -7,7 +7,7 @@
 
 # What is a Jenkins?
 
-[Jenkins](jenkins.md)
+[Understanding Jenkins](jenkins.md)
 
 ## Why Build a Pipeline? Business Value
 
