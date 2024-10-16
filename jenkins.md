@@ -6,14 +6,14 @@
 
 ### Why Use Jenkins? Benefits and Disadvantages
 
-#### Benefits:
+#### Benefits
 
 - **Extensible**: Over 1700 plugins to support building, deploying, and automating any project.
 - **Open Source**: Free to use and supported by a large community.
 - **Easy Configuration**: Simple to set up and configure via a web interface.
 - **Scalable**: Can distribute work across multiple machines to speed up builds and tests.
 
-#### Disadvantages:
+#### Disadvantages
 
 - **Complexity**: Can become complex to manage as the number of jobs and configurations grows.
 - **Resource Intensive**: Requires significant resources for large-scale deployments.
