@@ -34,3 +34,9 @@
 - **CircleCI**: A CI/CD tool that automates the software development process using continuous integration and continuous delivery.
 - **Bamboo**: A CI/CD server from Atlassian that integrates with other Atlassian products like JIRA and Bitbucket.
 - **TeamCity**: A JetBrains CI/CD tool that supports many programming languages and frameworks.
+
+---
+
+## Jenkins Basics
+
+[Jeninks Basics](jenkins-basics.md)

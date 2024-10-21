@@ -2,6 +2,8 @@
 
 ## What is CI? Benefits?
 
+![alt text](<tech264 (8).png>)
+
 **Continuous Integration (CI)** is a software development practice where developers frequently merge their code changes into a central repository. Automated builds and tests are run to ensure that the new code integrates well with the existing codebase.
 
 ### Benefits of CI
