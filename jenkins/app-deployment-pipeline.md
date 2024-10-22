@@ -45,17 +45,19 @@ Follow the steps to [create a new project](jenkins-basics.md#creating-a-new-proj
 4. **Select the Key**:
    - Under the **Credentials** dropdown, select the key you've added.
 
-   ![SSH Git connection](<../images/Screenshot 2024-10-18 150139.png>)
+      ![SSH Git connection](<../images/Screenshot 2024-10-18 150139.png>)
 
 5. **Branches to Build**:
    - Change it to `*/main`. Later, this can be changed to `dev`.
-   - ![Source branch](<../images/Screenshot 2024-10-18 150715.png>)
+
+      ![Source branch](<../images/Screenshot 2024-10-18 150715.png>)
 
 ### Build Environment
 
 1. **Enable Provide Node and npm bin/folder to PATH**:
    - Specify **NodeJS version 20**. This allows you to run Node.js and npm commands.
-   ![alt text](<../images/Screenshot 2024-10-18 150945.png>)
+
+      ![alt text](<../images/Screenshot 2024-10-18 150945.png>)
 
 ### Build Steps
 
@@ -74,14 +76,12 @@ Follow the steps to [create a new project](jenkins-basics.md#creating-a-new-proj
 
 ### Run the pipeline
 
-1. **Select Build Now**:
-   - Select **Build Now** and wait for the build to complete.
-
+1. **Select Build Now**
 2. **View Build History**:
    - You can view the job by clicking the link to it under **Build History**.
 
 3. **View Console Output**:
-   - Click **Console Output** to see the build process in real time if it hasn't finished yet.
+   - Click **Console Output** to see the build process in real time.
 
 ---
 
@@ -90,7 +90,7 @@ Follow the steps to [create a new project](jenkins-basics.md#creating-a-new-proj
 ### Configure the Project
 
 1. **Create a New Project**:
-   - Follow the steps to [create a new project](jenkins-basics.md#creating-a-new-project) 
+   - Follow the steps to [create a new project](jenkins-basics.md#creating-a-new-project)
 , including providing the [Github repository](#source-code-management) and selecting your **SSH** key.
 
 2. **Merge code**
@@ -100,20 +100,20 @@ Follow the steps to [create a new project](jenkins-basics.md#creating-a-new-proj
       - Add a build step with the following commands:
 
          ```bash
-         git switch main
-         git merge origin/dev
-         git push origin main
+         git switch main            # Switch to the Main Branch
+         git merge origin/dev       # Merge Changes from `dev` Branch
+         git push origin main       # Push Changes to GitHub
          ```
-
-      - `git switch main` **Switch to the Main Branch**:
-
-      - `git merge origin/dev` **Merge Changes from `dev` Branch**:
-
-      - `git push origin main` **Push Changes to GitHub**:
 
    2. **Add Git Publisher (Prefered standard)**
 
-      ![alt text](<Screenshot 2024-10-21 104129.png>)
+      ![alt text](<../images/Screenshot 2024-10-21 104129.png>)
+
+      - **Publish Only id Build Succeeds**: Avoid merging broken code
+      - **Merge Results**: Check to merge the branches
+      - **Branches**:
+        - **Branch to push**: *'main'*
+        - **Target remote name**: *'origin'*
 
 By following these steps, you can effectively merge changes from the `dev` branch into the `main` branch and push the updated `main` branch to your GitHub repository.
 
@@ -124,15 +124,19 @@ By following these steps, you can effectively merge changes from the `dev` branc
 ### Configuration
 
 1. **Create a New Project**:
-   - Follow the steps to [create a new project](jenkins-basics.md#creating-a-new-project) 
+
+   Follow the steps to [create a new project](jenkins-basics.md#creating-a-new-project)
 , including providing the [Github repository](#source-code-management) and selecting your **SSH** key.
 
 2. **SSH Credentials**
-   - To provide SSH key we can use the SSH Agent
-   ![alt text](<Screenshot 2024-10-21 140351.png>)
+
+   We need to provide Jenkins with the **SSH credentials** to access the **EC2 instance**. We can use the **SSH Agent** plugin.
+
+   ![alt text](<../images/Screenshot 2024-10-21 140351.png>)
 
 3. **Bash Shell Script**
-   - Use script in [Job 3 Script](../scripts/job3.sh)
+
+   Use script in [Job 3 Script](../scripts/job3.sh)
 
       ```bash
       #!/bin/bash

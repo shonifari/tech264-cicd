@@ -7,7 +7,7 @@
 
 # What is a Jenkins?
 
-[Understanding Jenkins](jenkins.md)
+[Understanding Jenkins](jenkins/README.md)
 
 ## Why Build a Pipeline? Business Value
 
@@ -21,7 +21,7 @@ Building a CI/CD pipeline provides significant business value:
 
 ## General Diagram of CI/CD
 
-![CI/CD Pipeline Diagram](https://via.placeholder.com/600x400.png?text=CI%2FCD+Pipeline+Diagram)
+![CI/CD Pipeline Diagram](<images/tech264 (8).png>)
 
 ## Understanding SDLC Workflow: Plan, Design, Develop, Deploy
 
